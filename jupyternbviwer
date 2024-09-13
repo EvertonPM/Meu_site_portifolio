@@ -1,0 +1,64 @@
+1. Usar o Jupyter nbviewer
+O Jupyter nbviewer é uma ferramenta que permite renderizar notebooks diretamente da web (GitHub, por exemplo). Você pode usar o link direto do nbviewer para mostrar o notebook de forma organizada.
+
+Como fazer:
+Vá para o Jupyter nbviewer.
+Cole a URL do seu notebook do GitHub no campo indicado (pode ser um arquivo .ipynb no GitHub).
+O nbviewer vai gerar um link para visualizar seu notebook com uma aparência limpa e organizada.
+Use esse link gerado no seu portfólio.
+Exemplo no seu portfólio:
+
+html
+Copiar código
+<div class="portifolio-item" style="background-image: url('imagens/netflix.png');" onclick="openProjectModal('Projeto 1', 'https://nbviewer.jupyter.org/github/seuusuario/nome-do-repositorio/blob/main/seu_notebook.ipynb')">
+
+2. Publicar no GitHub Pages com renderização
+Se você quiser continuar com o GitHub Pages, há algumas ferramentas que podem melhorar a visualização do notebook. Um exemplo é usar a biblioteca Jupyter Book para converter seus notebooks em um site estático interativo.
+
+Como fazer com Jupyter Book:
+Instale o Jupyter Book localmente:
+
+bash
+Copiar código
+pip install -U jupyter-book
+Estruture seu conteúdo e converta o notebook em um formato de livro:
+
+Coloque seu .ipynb em uma pasta de conteúdo e crie um livro (site) a partir do notebook.
+Siga este guia do Jupyter Book para configurar.
+Publique o conteúdo gerado no GitHub Pages. O resultado final será uma página web com visualização bonita do notebook, como o exemplo que você mencionou.
+
+3. Converter o Notebook para HTML e incorporar no portfólio
+Você pode converter seu notebook .ipynb para HTML e incluí-lo no GitHub Pages. Isso mantém o visual original, mas torna o conteúdo mais navegável em formato de página web.
+
+Passos:
+No terminal, dentro do ambiente de Jupyter:
+
+bash
+Copiar código
+jupyter nbconvert --to html nome_do_notebook.ipynb
+Coloque o arquivo .html resultante em seu repositório do GitHub Pages.
+
+Use o link para o arquivo .html no seu portfólio.
+
+Exemplo:
+
+html
+Copiar código
+<div class="portifolio-item" style="background-image: url('imagens/netflix.png');" onclick="openProjectModal('Projeto 1', 'https://seuusuario.github.io/nome-do-repositorio/nome_do_notebook.html')">
+4. Usar Google Colab para Visualização
+Você também pode abrir o notebook no Google Colab e compartilhar o link de visualização pública. O Colab renderiza o notebook de maneira visualmente atraente e interativa.
+
+Passos:
+Abra o notebook no Google Colab.
+No Colab, clique em Compartilhar e defina a visibilidade como "Público na Web".
+Use o link público gerado no portfólio.
+Exemplo:
+
+html
+Copiar código
+<div class="portifolio-item" style="background-image: url('imagens/netflix.png');" onclick="openProjectModal('Projeto 1', 'https://colab.research.google.com/github/seuusuario/nome-do-repositorio/blob/main/seu_notebook.ipynb')">
+Qual é a melhor abordagem?
+Jupyter nbviewer: Simples e rápido para uma visualização limpa de notebooks.
+Jupyter Book ou GitHub Pages: Para um visual mais organizado, ideal para notebooks complexos.
+Google Colab: Se quiser algo mais interativo e fácil de compartilhar.
+Escolha o método que melhor se adapta às suas necessidades e ao estilo do seu portfólio!

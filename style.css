@@ -1,0 +1,830 @@
+/*ESTILO GERAL*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    line-height: 1.6;
+    font-family: "Poppins", sans-serif; /* Aplicar a fonte Poppins ao corpo */
+}
+
+h1, h2, h3 {
+    font-family: "Poppins", sans-serif; /* Aplicar a fonte Poppins aos títulos */
+}
+
+p {
+    font-family: "Poppins", sans-serif; /* Aplicar a fonte Poppins ao texto */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+header {
+    padding: 20px 0;
+    border-bottom: 1px solid #333;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+/* Estilo para o menu */
+header nav ul li a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-size: 20px; /* Ajuste o tamanho da fonte conforme necessário */
+    font-weight: 700; /* Peso da fonte para destacar */
+    font-family: "Poppins", sans-serif; /* Aplicar a fonte Poppins */
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #00FF08;
+}
+
+
+.intro {
+    padding: 0px; /* Remove o padding, pois vamos usar altura completa */
+    margin: 0px; /* Remove a margem, se houver */
+    text-align: center;
+    background-color: #282828; /* Cor de fundo de fallback, caso a imagem não carregue */
+    background-image: url('imagens/fundo.png'); /* Caminho para a sua imagem de fundo */
+    background-size: cover; /* Ajusta a imagem para cobrir a área do fundo */
+    background-position: center; /* Centraliza a imagem no fundo */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    height: calc(90vh - 80px); /* Ajusta a altura para ocupar a tela menos a altura do cabeçalho */
+    color: #f0f0f0; /* Ajuste a cor do texto para garantir contraste */
+    display: flex; /* Usado para centralizar o conteúdo verticalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+.intro p {
+    font-size: 1.3em; 
+    font-weight: bold; 
+    color: #00ff00; 
+    margin: 0; 
+    line-height: 100px;
+}
+
+.intro p.eu {
+    color: #f0f0f0;
+    font-size: 4.2em; 
+    font-weight: bold;
+    line-height: 15px;
+}
+
+.intro h1.name {
+    color: #f0f0f0;
+    font-size: 4.2em; 
+    margin-top: 0.03em; /* Espaço entre "Eu sou" e "Everton Pereira" */
+}
+
+.intro .subheading {
+    color: #f0f0f0;
+    font-size: 1.3em; 
+    font-weight: normal; 
+    margin: 0; 
+}
+
+.especialidades {
+    height: 100vh; /* Ocupa toda a tela */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1e1e1e;
+}
+
+.carrossel-certificados {
+    display: flex;
+    justify-content: center; /* Centraliza os certificados */
+    align-items: center;
+    position: relative;
+}
+
+.slides-certificados {
+    display: flex;
+    justify-content: center;
+    width: 80%; /* Ajuste para centralizar o conteúdo */
+}
+
+.slide-certificado {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.certificado-overlay img {
+    width: 100%; /* Certificado centralizado */
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+
+.certificado-overlay .texto-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.certificado-overlay:hover img {
+    filter: brightness(23%); /* Escurece a imagem ao passar o mouse */
+}
+
+.certificado-overlay:hover .texto-overlay {
+    opacity: 1; /* Mostra o texto ao passar o mouse */
+}
+
+#especialidades .prev-especialidades, 
+#especialidades .next-especialidades {
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    border: none;
+    color: #fff;
+    font-size: 2em;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+#especialidades .prev-especialidades:hover, 
+#especialidades .next-especialidades:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo mais escuro */
+}
+
+#especialidades .prev-especialidades {
+    left: 20px;
+}
+
+#especialidades .next-especialidades {
+    right: 20px;
+}
+
+.indicadores-certificados {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.indicadores-certificados ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.indicadores-certificados ul li {
+    width: 10px;
+    height: 10px;
+    background-color: #777;
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.indicadores-certificados ul li.ativo {
+    width: 15px;
+    height: 15px;
+    background-color: #00FF08;
+}
+.slide-certificado {
+    display: none;
+}
+
+.slide-certificado.ativo {
+    display: flex; /* Mostra apenas o slide ativo */
+}
+
+
+
+.sobre {
+    padding-top: 2px; /* Diminui o espaço superior */
+    height: 100vh; /* Reduz um pouco a altura para "puxar" tudo para cima */
+    padding: 0;
+    margin: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a1a1a;
+}
+
+.carrossel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slides {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slide img {
+    width: 35%;
+    border-radius: 10px;
+    margin-left: 130px; /* Aumentar a margem à esquerda da imagem */
+}
+
+/* Estilo para compactar o texto na aba sobre */
+.sobre .slide .texto {
+    flex: 1;
+    padding: 20px;
+    text-align: justify;
+    margin-left: 20px; /* Reduz a margem à esquerda do texto */
+    margin-right: 100px; /* Adiciona margem à direita do texto */
+}
+
+.slide h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+.slide h2 span{
+    color:#00FF08;
+}
+.slide p {
+    margin-bottom: 20px;
+}
+
+.prev, .next {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fff;
+    font-size: 2em;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+/* Estilo para centralizar as setas next e prev */
+.prev {
+    left: 20px; /* Define a distância da seta prev */
+}
+
+.next {
+    right: 20px; /* Define a mesma distância da seta next */
+}
+
+@media (max-width: 768px) {
+    .carrossel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .slide {
+        flex-direction: column;
+    }
+
+    .slide img {
+        width: 80%;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .prev, .next {
+        top: 90%;
+        margin: 0;
+    }
+
+    .prev {
+        left: 20px;
+    }
+
+    .next {
+        right: 20px;
+    }
+}
+
+.slide {
+    display: none;
+}
+
+.slide.ativo {
+    display: flex;
+}
+
+.indicadores {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.indicadores ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.indicadores ul li {
+    width: 10px;
+    height: 10px;
+    background-color: #777;
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.indicadores ul li.ativo {
+    width: 15px;
+    height: 15px;
+    background-color: #00FF08;
+}
+/* Estilo para descer os botões do CV e redes sociais */
+.botoes-sociais {
+    text-align: center;
+    margin-top: 150px; /* Aumente o valor conforme necessário para descer os botões */
+}
+
+.botoes-sociais .btn-cv {
+    display: inline-block;
+    padding: 15px 30px; /* Aumenta o tamanho do botão */
+    background-color: #00FF08;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px; /* Bordas mais arredondadas */
+    margin-bottom: 15px; /* Aumenta a distância entre o botão CV e os ícones de redes sociais */
+    font-size: 1.2em; /* Tamanho de fonte maior no botão */
+    transition: background-color 0.3s;
+}
+
+.botoes-sociais .btn-cv:hover {
+    background-color: #00cc06;
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: center; /* Centraliza os ícones */
+    gap: 5px; /* Diminui o espaçamento entre os ícones */
+}
+
+.redes-sociais a {
+    font-size: 1.5em; /* Diminui o tamanho dos ícones */
+    color: #f0f0f0;
+    transition: color 0.3s;
+}
+
+.redes-sociais a:hover {
+    color: #00FF08;
+}
+
+.redes-sociais {
+    display: flex; /* Mantém os ícones das redes sociais lado a lado */
+    justify-content: center; /* Centraliza os ícones */
+}
+
+.redes-sociais a {
+    margin: 0 10px;
+    font-size: 2em;
+    color: #f0f0f0;
+    transition: color 0.3s;
+}
+
+.redes-sociais a:hover {
+    color: #00FF08;
+}
+
+
+
+.redes-sociais {
+    margin-top: 20px;
+}
+
+.redes-sociais .btn-social {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: #00FF08;
+    color: #1a1a1a;
+    font-size: 1.5em;
+    margin: 0 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.redes-sociais .btn-social:hover {
+    background-color: #00cc06;
+}
+
+.portifolio {
+    min-height: 100vh; /* Garante que ocupe a altura total da tela */
+    padding: 10px 0; /* Reduzi o padding para aproximar o conteúdo */
+    background-color:#1a1a1a;
+    text-align: center;
+}
+
+
+
+.portifolio .container {
+    text-align: center;
+}
+
+.portifolio h2 {
+    margin-top: 70px;
+    margin-bottom: -80px;
+    font-size: 2.5em;
+    color: #00cc06;
+}
+
+.portifolio h2 span {
+    color: #ffffff;
+}
+
+.carrossel-projetos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: calc(100vh - 160px); /* Ajuste conforme necessário */
+}
+
+.slides-projetos {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slide-projeto {
+    display: none;  /* Oculta todos os slides */
+    flex: 0 0 100%; /* Certifique-se de que o slide ocupe 100% do espaço quando estiver visível */
+}
+
+.slide-projeto.ativo {
+    display: flex;  /* Mostra apenas o slide ativo */
+    justify-content: center;
+}
+
+
+.portifolio-item {
+    width: 30%;
+    height: 480px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin: 10px 10px; /* Reduzi a margem superior para aproximar do título */
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+
+
+.portifolio-item:hover {
+    transform: scale(1.05);
+}
+
+.portifolio-item .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.3s;
+}
+
+.portifolio-item:hover .overlay {
+    transform: translateY(-100%);
+}
+
+.prev-projetos, .next-projetos {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fff;
+    font-size: 2em;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+.prev-projetos {
+    left: 20px;
+}
+
+.next-projetos {
+    right: 20px;
+}
+
+.prev-projetos:hover, .next-projetos:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.indicadores-projetos {
+    text-align: center;
+    margin-top: -80px; /* Reduzido de 20px para 10px */
+    margin-bottom: 110px;
+}
+
+
+.indicadores-projetos ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.indicadores-projetos ul li {
+    width: 10px;
+    height: 10px;
+    background-color: #777;
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.indicadores-projetos ul li.ativo {
+    width: 15px;
+    height: 15px;
+    background-color: #00FF08;
+}
+
+/* Modal de Projeto */
+/* Modal de Projeto */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; /* Alinha o conteúdo ao centro */
+    text-align: center;
+}
+
+#projectImage {
+    max-width: 100%; /* Ajusta a largura máxima da imagem */
+    height: auto;
+    margin-top: 6%;
+}
+
+#projectTitle {
+    font-weight: bold; /* Deixa o título em negrito */
+    margin-bottom: -3%;
+    color: black; /* Cor preta para o título */
+}
+
+#projectDescription {
+    color: black; /* Cor preta para o texto da descrição */
+}
+
+.btn-project, .btn-close {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.btn-project {
+    background-color: #00FF08;
+    color: #1a1a1a;
+    margin-bottom: -35px; /* Adiciona espaço entre os botões */
+}
+
+.btn-close {
+    margin-bottom: 0px;
+    background-color: #ccc;
+    color: #333;
+}
+
+.btn-project:hover {
+    background-color: #00cc06;
+}
+
+.btn-close:hover {
+    background-color: #999;
+}
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 5%; /* Adiciona padding superior */
+    padding-bottom: 5%; /* Adiciona padding inferior para igualar o topo e base */
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-project, .btn-close {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.btn-project {
+    background-color: #00FF08;
+    color: #1a1a1a;
+}
+
+.btn-close {
+    background-color: #ccc;
+    color: #333;
+}
+
+.btn-project:hover {
+    background-color: #00cc06;
+}
+
+.btn-close:hover {
+    background-color: #999;
+}
+
+.contato {
+    padding: 60px 0;
+    background-color: #1e1e1e; /* Ajuste a cor de fundo se necessário */
+    min-height: calc(100vh - 80px); /* Ajuste a altura mínima */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.contato h2 {
+    font-size: 2.5em; /* Tamanho do título igual ao título do portfólio */
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: center; /* Centraliza o título */
+}
+
+.contato h2 span{
+    color: #00FF08;
+}
+
+.contato .subtitulo {
+    font-size: 1em;
+    color: #f0f0f0d2;
+    margin-bottom: 60px;
+    text-transform: lowercase;
+    text-align: center; /* Centraliza o subtítulo */
+}
+
+.contato form {
+    width: 200%; /* Mantém a largura em 200% */
+    max-width: 600px; /* Ajusta a largura máxima do formulário */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center; /* Centraliza os campos do formulário */
+    margin: 0 auto; /* Centraliza o formulário horizontalmente */
+    transform: translateX(-25%); /* Centraliza o formulário com largura de 200% */
+}
+
+
+.contato form input,
+.contato form textarea {
+
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.contato form button {
+    width: 100%;
+    margin-top: 11px;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #00FF08;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contato form button:hover {
+    background-color: #00cc06;
+}
+
+.whatsapp-container {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.btn-whatsapp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1e1e1e;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-whatsapp img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.btn-whatsapp p {
+    margin: 0;
+    font-size: 1em;
+    text-align: center;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1e1e1e;;
+}
+
+footer {
+    padding: 20px 0;
+    border-top: 1px solid #333;
+    text-align: center;
+    width: 100%;
+    background-color: #1a1a1a;; /* Ajuste a cor de fundo se necessário */
+}
+
