@@ -151,11 +151,32 @@ header nav ul li a:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
-    font-size: 2em;
+    font-size: 1.6em; /* Reduz o tamanho da fonte */
     font-weight: bold;
     text-align: center;
     opacity: 0;
+    max-width: 60%; /* Limita a largura do texto para melhorar a quebra de linha */
+    line-height: 1.5; /* Melhora o espaçamento entre linhas */
     transition: opacity 0.3s ease;
+}
+
+.ementa {
+    font-size: 0.7em; /* Reduz o tamanho da fonte */
+    margin-top: 25px; /* Adiciona espaço entre o parágrafo e o texto acima */
+    color: #f0f0f0; /* Define a cor do texto */
+    line-height: 1.5; /* Aumenta o espaçamento entre as linhas */
+    text-align: center; /* Justifica o texto */
+}
+
+.ementa a {
+    color: #00FF08; /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-weight: bold; /* Deixa o link em negrito */
+    transition: color 0.3s; /* Animação para a mudança de cor */
+}
+
+.ementa a:hover {
+    color: #00cc06; /* Cor do link ao passar o mouse */
 }
 
 .certificado-overlay:hover img {
@@ -611,24 +632,78 @@ header nav ul li a:hover {
 }
 
 #projectImage {
-    max-width: 100%; /* Ajusta a largura máxima da imagem */
+    max-width: 100%; /* Mantém o ajuste da largura */
     height: auto;
-    margin-top: 6%;
+    margin-top: 2%; /* Aumenta o espaço superior da imagem */
+    margin-bottom: 20px; /* Adiciona mais espaço abaixo da imagem */
 }
 
 #projectTitle {
-    font-weight: bold; /* Deixa o título em negrito */
-    margin-bottom: -3%;
-    color: black; /* Cor preta para o título */
+    font-weight: bold;
+    margin-bottom: 20px; /* Adiciona mais espaço entre o título e a descrição */
+    color: black;
 }
 
 #projectDescription {
-    color: black; /* Cor preta para o texto da descrição */
+    color: black;
+    text-align: justify; /* Justifica o texto */
+    max-width: 80%; /* Limita a largura máxima da descrição */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    line-height: 1.6; /* Melhora a legibilidade do texto */
+    margin-bottom: 40px; /* Adiciona mais espaço abaixo da descrição */
 }
+
+#projectLink {
+    margin-top: -30px;
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    color: #0980f7;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#projectLink:hover {
+    color: #0629a9;
+}
+
+#projectLink2 {
+    margin-top: -30px;
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    color: #0980f7;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#projectLink2:hover {
+    color: #0629a9;
+}
+
+#projectLink3 {
+    margin-top: -30px;
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    color: #0980f7;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#projectLink3:hover {
+    color: #0629a9;
+}
+
+
 
 .btn-project, .btn-close {
     display: block;
     width: 100%;
+    padding: 15px;
     padding: 15px;
     margin-top: 20px;
     border: none;
@@ -639,13 +714,13 @@ header nav ul li a:hover {
 .btn-project {
     background-color: #00FF08;
     color: #1a1a1a;
-    margin-bottom: -35px; /* Adiciona espaço entre os botões */
+    margin-bottom: 30px; /* Aumenta o espaço entre os botões */
 }
 
 .btn-close {
-    margin-bottom: 0px;
     background-color: #ccc;
     color: #333;
+    margin-top: -11px; /* Reduz o espaço entre o botão "Ver Projeto" e "Fechar" */
 }
 
 .btn-project:hover {
@@ -685,34 +760,6 @@ header nav ul li a:hover {
     color: black;
     text-decoration: none;
     cursor: pointer;
-}
-
-.btn-project, .btn-close {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    margin-top: 10px;
-    border: none;
-    font-size: 1em;
-    cursor: pointer;
-}
-
-.btn-project {
-    background-color: #00FF08;
-    color: #1a1a1a;
-}
-
-.btn-close {
-    background-color: #ccc;
-    color: #333;
-}
-
-.btn-project:hover {
-    background-color: #00cc06;
-}
-
-.btn-close:hover {
-    background-color: #999;
 }
 
 .contato {
